@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "downloader"
+version = "1.0.0"
+description = ""
+authors = ["Juan Arias <juan.arias.freire@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Telethon = "^1.23.0"
+tqdm = "^4.62.0"
+cryptg = "^0.2.post4"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+black = "^21.7b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
