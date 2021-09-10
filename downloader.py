@@ -87,10 +87,10 @@ Telegram API credentials can be read from environment variables or passed in as 
         help="Number of download tasks to run simultaneously.",
     )
     parser.add_argument(
-        "--api-id", required=True, default=os.environ.get("TELEGRAM_APP_API_ID")
+        "--api-id", default=os.environ.get("TELEGRAM_APP_API_ID")
     )
     parser.add_argument(
-        "--api-has", required=True, default=os.environ.get("TELEGRAM_APP_API_HASH")
+        "--api-hash", default=os.environ.get("TELEGRAM_APP_API_HASH")
     )
     inputs = parser.add_mutually_exclusive_group(required=True)
     inputs.add_argument(
