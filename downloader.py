@@ -173,10 +173,10 @@ async def process_messages(valid_messages, batch_size, destination):
         start_time = time.time()
         results = await asyncio.gather(*tasks)
         batch_time = time.time() - start_time
-
-        speed = mb(sum(results)) / batch_time
+        total_size = mb(sum(results))
+        speed = total_size / batch_time
         logging.info(
-            f"Batch finished in {batch_time:.3f}s @ {speed:.3}MB/s "
+            f"Batch finished: Got {total_size:.3f}MB in {batch_time:.3f}s @ {speed:.3}MB/s "
             f"(avg {speed / batch_size:.3f}MB/s per file)"
         )
 
